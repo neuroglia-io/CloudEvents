@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Neuroglia.CloudEvents</name>
+    </assembly>
+    <members>
+        <member name="T:Neuroglia.CloudEvents.CloudEventBuilder">
+            <summary>
+            Represents the default implementation of the <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/> interface
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Neuroglia.CloudEvents.CloudEventBuilder"/>
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.SpecVersion">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s <see cref="T:CloudNative.CloudEvents.CloudEventsSpecVersion"/>
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Type">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s type
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Subject">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s subject
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Source">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s source <see cref="T:System.Uri"/>
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Id">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s id
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Time">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s timestamp
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Data">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s data
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.DataContentType">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s data content type
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.DataSchema">
+            <summary>
+            Gets/sets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s data schema <see cref="T:System.Uri"/>
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Extensions">
+            <summary>
+            Gets/sets a <see cref="T:System.Collections.Generic.List`1"/> containing the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s extensions
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventBuilder.Attributes">
+            <summary>
+            Gets/sets an <see cref="T:System.Collections.Generic.IDictionary`2"/> containing the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s attributes
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithSpecVersion(CloudNative.CloudEvents.CloudEventsSpecVersion)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithType(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithSubject(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithSource(System.Uri)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithId(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithTime(System.Nullable{System.DateTime})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithData(System.Object,System.Net.Mime.ContentType)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithDataSchema(System.Uri)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.HasBeenRedelivered(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithSequence(System.UInt64)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithSubscriptionId(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.WithAttributes(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.Build">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventBuilder.FromEvent(CloudNative.CloudEvents.CloudEvent)">
+            <summary>
+            Creates a new <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/> from the specified <see cref="T:CloudNative.CloudEvents.CloudEvent"/>
+            </summary>
+            <param name="e">The <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to create a new <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/> for</param>
+            <returns>A new <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/> based on the specified <see cref="T:CloudNative.CloudEvents.CloudEvent"/></returns>
+        </member>
+        <member name="T:Neuroglia.CloudEvents.Extensions.RedeliveredExtension">
+            <summary>
+            Represents an <see cref="T:CloudNative.CloudEvents.ICloudEventExtension"/> used to set a boolean indicating whether or not a <see cref="T:CloudNative.CloudEvents.CloudEvent"/> has been redelivered
+            </summary>
+        </member>
+        <member name="F:Neuroglia.CloudEvents.Extensions.RedeliveredExtension.RedeliveredAttributeName">
+            <summary>
+            Gets the <see cref="T:Neuroglia.CloudEvents.Extensions.RedeliveredExtension"/> attribute name
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.RedeliveredExtension.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Neuroglia.CloudEvents.Extensions.RedeliveredExtension"/>
+            </summary>
+            <param name="redelivered">A boolean indicating whether or not the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> has been redelivered</param>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.Extensions.RedeliveredExtension.Redelivered">
+            <summary>
+            Gets/sets a boolean indicating whether or not the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> has been redelivered
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.RedeliveredExtension.Attach(CloudNative.CloudEvents.CloudEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.RedeliveredExtension.GetAttributeType(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.RedeliveredExtension.ValidateAndNormalize(System.String,System.Object@)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension">
+            <summary>
+            Represents an <see cref="T:CloudNative.CloudEvents.ICloudEventExtension"/> used to set the id of the subscription a <see cref="T:CloudNative.CloudEvents.CloudEvent"/> is bound to
+            </summary>
+        </member>
+        <member name="F:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension.SubscriptionIdAttributeName">
+            <summary>
+            Gets the <see cref="T:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension"/> attribute name
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension"/>
+            </summary>
+            <param name="subscriptionId">The id of the subscription the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> is bound to</param>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension.SubscriptionId">
+            <summary>
+            Gets/sets the id of the subscription the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> is bound to
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension.Attach(CloudNative.CloudEvents.CloudEvent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension.GetAttributeType(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.SubscriptionIdExtension.ValidateAndNormalize(System.String,System.Object@)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Neuroglia.CloudEvents.Extensions.ULongSequenceExtension">
+            <summary>
+            Represents a <see cref="T:CloudNative.CloudEvents.Extensions.SequenceExtension"/> based on a <see cref="T:System.UInt64"/> value
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.Extensions.ULongSequenceExtension.#ctor(System.Nullable{System.UInt64})">
+            <summary>
+            Initializes a new <see cref="T:Neuroglia.CloudEvents.Extensions.ULongSequenceExtension"/>
+            </summary>
+            <param name="sequenceValue">The sequence value</param>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.Extensions.ULongSequenceExtension.Sequence">
+            <summary>
+            Gets/sets the sequence value
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.Extensions.ULongSequenceExtension.SequenceType">
+            Gets/sets the sequence type
+        </member>
+        <member name="T:Neuroglia.CloudEvents.ICloudEventBuilder">
+            <summary>
+            Defines the fundamentals of a service used to build a <see cref="T:CloudNative.CloudEvents.CloudEvent"/>
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithSpecVersion(CloudNative.CloudEvents.CloudEventsSpecVersion)">
+            <summary>
+            Sets the <see cref="T:CloudNative.CloudEvents.CloudEventsSpecVersion"/> of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="specVersion">The <see cref="T:CloudNative.CloudEvents.CloudEventsSpecVersion"/> of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithType(System.String)">
+            <summary>
+            Sets the type of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="type">The type of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithSubject(System.String)">
+            <summary>
+            Sets the subject of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="subject">The subject of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithSource(System.Uri)">
+            <summary>
+            Sets the source of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="source">The source of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithId(System.String)">
+            <summary>
+            Sets the id of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="id">The id of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithTime(System.Nullable{System.DateTime})">
+            <summary>
+            Sets the timestamp of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="time">The timestamp of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithData(System.Object,System.Net.Mime.ContentType)">
+            <summary>
+            Sets the data of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="data">The data of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <param name="contentType">The <see cref="T:System.Net.Mime.ContentType"/> of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s data</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithDataSchema(System.Uri)">
+            <summary>
+            Sets the data schema <see cref="T:System.Uri"/> of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="dataSchema">The data schema <see cref="T:System.Uri"/> of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithSubscriptionId(System.String)">
+            <summary>
+            Sets the subscription id the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build is bound to
+            </summary>
+            <param name="subscriptionId">The subscription id the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build is bound to</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithSequence(System.UInt64)">
+            <summary>
+            Sets the sequence of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="sequence">The sequence of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.HasBeenRedelivered(System.Boolean)">
+            <summary>
+            Sets a boolean indicating whether or not the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build has been redelivered
+            </summary>
+            <param name="redelivered">A boolean indicating whether or not the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build has been redelivered</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.WithAttributes(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Sets an <see cref="T:System.Collections.Generic.IDictionary`2"/> representing the attributes of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build
+            </summary>
+            <param name="attributes">An <see cref="T:System.Collections.Generic.IDictionary`2"/> representing the attributes of the <see cref="T:CloudNative.CloudEvents.CloudEvent"/> to build</param>
+            <returns>The configured <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/></returns>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.ICloudEventBuilder.Build">
+            <summary>
+            Builds the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>
+            </summary>
+            <returns>The newly created <see cref="T:CloudNative.CloudEvents.CloudEvent"/></returns>
+        </member>
+    </members>
+</doc>
