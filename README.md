@@ -1,5 +1,5 @@
 # Neuroglia CloudEvents
-A .NET Standard 2.1 library that extends [CloudEvents](https://github.com/cloudevents/sdk-csharp)
+A .NET Standard 2.1 library that extends the [CloudEvents library](https://github.com/cloudevents/sdk-csharp)
 
 # Usage
 
