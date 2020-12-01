@@ -182,11 +182,13 @@ namespace Neuroglia.CloudEvents
         /// <inheritdoc/>
         public virtual CloudEvent Build()
         {
-            CloudEvent e = new CloudEvent(this.SpecVersion, this.Type, this.Source, this.Subject, this.Id, this.Time, this.Extensions.ToArray())
+            CloudEvent e = new CloudEvent(this.SpecVersion, this.Type, this.Source, this.Id, this.Time, this.Extensions.ToArray())
             {
                 Data = this.Data,
                 DataContentType = this.DataContentType
             };
+            if (!string.IsNullOrWhiteSpace(this.Subject))
+                e.Subject = this.Subject;
             if(this.Attributes != null)
             {
                 IDictionary<string, object> eventAttributes = e.GetAttributes();

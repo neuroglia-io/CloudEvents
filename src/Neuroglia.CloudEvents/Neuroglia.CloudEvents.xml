@@ -4,6 +4,34 @@
         <name>Neuroglia.CloudEvents</name>
     </assembly>
     <members>
+        <member name="T:Neuroglia.CloudEvents.CloudEventAttribute">
+            <summary>
+            Represents an <see cref="T:System.Attribute"/> used to specify the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>s attributes of the marked class
+            </summary>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:Neuroglia.CloudEvents.CloudEventAttribute"/>
+            </summary>
+            <param name="type">The <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s type <see cref="T:System.Uri"/></param>
+        </member>
+        <member name="M:Neuroglia.CloudEvents.CloudEventAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new <see cref="T:Neuroglia.CloudEvents.CloudEventAttribute"/>
+            </summary>
+            <param name="type">The <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s type <see cref="T:System.Uri"/></param>
+            <param name="dataSchema">The <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s data schema <see cref="T:System.Uri"/></param>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventAttribute.Type">
+            <summary>
+            Gets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s type <see cref="T:System.Uri"/>
+            </summary>
+        </member>
+        <member name="P:Neuroglia.CloudEvents.CloudEventAttribute.DataSchema">
+            <summary>
+            Gets the <see cref="T:CloudNative.CloudEvents.CloudEvent"/>'s data schema <see cref="T:System.Uri"/>
+            </summary>
+        </member>
         <member name="T:Neuroglia.CloudEvents.CloudEventBuilder">
             <summary>
             Represents the default implementation of the <see cref="T:Neuroglia.CloudEvents.ICloudEventBuilder"/> interface
